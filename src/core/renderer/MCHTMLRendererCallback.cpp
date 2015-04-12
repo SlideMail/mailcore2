@@ -225,44 +225,33 @@ mailcore::String * HTMLRendererTemplateCallback::templateForEmbeddedMessageHeade
 
 mailcore::String * HTMLRendererTemplateCallback::templateForImage(AbstractPart * part)
 {
-    return MCSTR("");
+    return MCSTR("</br>");
 }
 
 mailcore::String * HTMLRendererTemplateCallback::templateForAttachment(AbstractPart * part)
 {
-    return MCSTR("{{#HASSIZE}}\
-                 {{#HASFILENAME}}\
-                 <div>- {{FILENAME}}, {{SIZE}}</div>\
-                 {{/HASFILENAME}}\
-                 {{#NOFILENAME}}\
-                 <div>- Untitled, {{SIZE}}</div>\
-                 {{/NOFILENAME}}\
-                 {{/HASSIZE}}\
-                 {{#NOSIZE}}\
-                 {{#HASFILENAME}}\
-                 <div>- {{FILENAME}}</div>\
-                 {{/HASFILENAME}}\
-                 {{#NOFILENAME}}\
-                 <div>- Untitled</div>\
-                 {{/NOFILENAME}}\
-                 {{/NOSIZE}}\
-                 ");
+   return MCSTR("<div id='uid:{{UNIQUEID}}' class='loading-placeholder'>\
+             <div class='icon'></div>\
+             <div class='filename'>{{FILENAME}}</div>\
+             <div class='progress'>{{SIZE}}</div>\
+             <div class='bar'></div>\
+             </div>");
 }
 
 mailcore::String * HTMLRendererTemplateCallback::templateForMessage(AbstractMessage * message)
 {
-    return MCSTR("<div style=\"padding-bottom: 20px;\">{{HEADER}}</div><div>{{BODY}}</div>");
+    return MCSTR("<div style=\"padding-bottom: 0px;\">{{HEADER}}</div><div>{{BODY}}</div>");
 }
 
 
 mailcore::String * HTMLRendererTemplateCallback::templateForEmbeddedMessage(AbstractMessagePart * part)
 {
-    return MCSTR("<div style=\"padding-bottom: 20px;\">{{HEADER}}</div><div>{{BODY}}</div>");
+    return MCSTR("<div style=\"padding-bottom: 0px;\">{{HEADER}}</div><div>{{BODY}}</div>");
 }
 
 mailcore::String * HTMLRendererTemplateCallback::templateForAttachmentSeparator()
 {
-    return MCSTR("<hr/>");
+    return MCSTR("");
 }
 
 mailcore::String * HTMLRendererTemplateCallback::filterHTMLForMessage(mailcore::String * html)
