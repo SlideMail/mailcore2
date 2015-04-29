@@ -230,12 +230,23 @@ mailcore::String * HTMLRendererTemplateCallback::templateForImage(AbstractPart *
 
 mailcore::String * HTMLRendererTemplateCallback::templateForAttachment(AbstractPart * part)
 {
-   return MCSTR("<div id='uid:{{UNIQUEID}}' class='loading-placeholder'>\
-             <div class='icon'></div>\
-             <div class='filename'>{{FILENAME}}</div>\
-             <div class='progress'>{{SIZE}}</div>\
-             <div class='bar'></div>\
-             </div>");
+    return MCSTR("{{#HASSIZE}}\
+                 {{#HASFILENAME}}\
+                 <div>- {{FILENAME}}, {{SIZE}}</div>\
+                 {{/HASFILENAME}}\
+                 {{#NOFILENAME}}\
+                 <div>- Untitled, {{SIZE}}</div>\
+                 {{/NOFILENAME}}\
+                 {{/HASSIZE}}\
+                 {{#NOSIZE}}\
+                 {{#HASFILENAME}}\
+                 <div>- {{FILENAME}}</div>\
+                 {{/HASFILENAME}}\
+                 {{#NOFILENAME}}\
+                 <div>- Untitled</div>\
+                 {{/NOFILENAME}}\
+                 {{/NOSIZE}}\
+                 ");
 }
 
 mailcore::String * HTMLRendererTemplateCallback::templateForMessage(AbstractMessage * message)
