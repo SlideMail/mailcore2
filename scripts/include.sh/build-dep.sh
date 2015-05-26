@@ -7,25 +7,25 @@ build_git_ios()
   fi
 
   simarchs="i386 x86_64"
-  if xcodebuild -showsdks 2>/dev/null|grep iphoneos8.1 >/dev/null ; then
-    sdkversion=8.1
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos8.0 >/dev/null ; then
-    sdkversion=8.0
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.1 >/dev/null ; then
-    sdkversion=7.1
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.0 >/dev/null ; then
-    sdkversion=7.0
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos6.1 >/dev/null ; then
-    sdkversion=6.1
-    devicearchs="armv7 armv7s"
-  else
-    echo SDK not found
-    exit 1
-  fi
+#  if xcodebuild -showsdks 2>/dev/null|grep iphoneos8.1 >/dev/null ; then
+    sdkversion=8.3
+    devicearchs="armv7 armv7s arm64 x86_64"
+#  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos8.0 >/dev/null ; then
+#    sdkversion=8.0
+#    devicearchs="armv7 armv7s arm64"
+#  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.1 >/dev/null ; then
+#    sdkversion=7.1
+#    devicearchs="armv7 armv7s arm64"
+#  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.0 >/dev/null ; then
+#    sdkversion=7.0
+#    devicearchs="armv7 armv7s arm64"
+#  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos6.1 >/dev/null ; then
+#    sdkversion=6.1
+#    devicearchs="armv7 armv7s"
+#  else
+#    echo SDK not found
+#    exit 1
+#  fi
 
   versions_path="$scriptpath/deps-versions.plist"
   version="`defaults read "$versions_path" "$name" 2>/dev/null`"
@@ -58,8 +58,9 @@ build_git_ios()
   mkdir -p "$builddir/downloads"
   cd "$builddir/downloads"
   if test -d "$name" ; then
+    echo "checkingout testing_branch"
     cd "$name"
-    git checkout master
+    git checkout testing_branch
     git pull --rebase
   else
     git clone $url "$name"
