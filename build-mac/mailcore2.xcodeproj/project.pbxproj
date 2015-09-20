@@ -178,6 +178,8 @@
 		BD6272981A13FF2A00129AA8 /* test-all-mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD6272961A13FF2A00129AA8 /* test-all-mac.mm */; };
 		BD6272991A13FF2A00129AA8 /* test-all-mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD6272961A13FF2A00129AA8 /* test-all-mac.mm */; };
 		BD63713B177DFF080094121B /* MCLibetpan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD637139177DFF080094121B /* MCLibetpan.cpp */; };
+		BD7C0F461B545CE2003337DF /* MCZipMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD7C0F451B545CE2003337DF /* MCZipMac.mm */; };
+		BD7C0F471B545CE2003337DF /* MCZipMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD7C0F451B545CE2003337DF /* MCZipMac.mm */; };
 		BDCD7C5B1A5B1C2C0001DCC3 /* MCErrorMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDCD7C591A5B1C2C0001DCC3 /* MCErrorMessage.cpp */; };
 		BDCD7C5C1A5B1C2C0001DCC3 /* MCErrorMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDCD7C591A5B1C2C0001DCC3 /* MCErrorMessage.cpp */; };
 		BDCD7CC31A70771B0001DCC3 /* csdetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDCD7C6A1A70771B0001DCC3 /* csdetect.cpp */; };
@@ -790,6 +792,8 @@
 		C6BD28A3170BD84F00A91AC1 /* libMailCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C64EA537169E772200778456 /* libMailCore.a */; };
 		C6BD28AB170BDB6B00A91AC1 /* MCOFramework.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6BD28A9170BDB6B00A91AC1 /* MCOFramework.mm */; };
 		C6BD28AC170BDEA200A91AC1 /* MailCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6BD288D170BD71100A91AC1 /* MailCore.framework */; };
+		C6BEC1AA1B1256BA00546519 /* MCHTMLCleaner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C63CD69016BE566E00DB18F1 /* MCHTMLCleaner.h */; };
+		C6BEC1AB1B1256C100546519 /* MCHTMLCleaner.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C63CD69016BE566E00DB18F1 /* MCHTMLCleaner.h */; };
 		C6CCC5C716FFE5190077A5FC /* MCORange.mm in Sources */ = {isa = PBXBuildFile; fileRef = C6CCC5C616FFE5190077A5FC /* MCORange.mm */; };
 		C6CCC5C916FFEA070077A5FC /* MCORange.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6CCC5C816FFE54F0077A5FC /* MCORange.h */; };
 		C6CCC5CA16FFEA090077A5FC /* MCOIndexSet.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6F5B9F216FEAC6C00D9DABD /* MCOIndexSet.h */; };
@@ -1004,6 +1008,7 @@
 			dstPath = include/MailCore;
 			dstSubfolderSpec = 16;
 			files = (
+				C6BEC1AB1B1256C100546519 /* MCHTMLCleaner.h in CopyFiles */,
 				27E91D601A80D3F4005A3244 /* MCMXRecordResolverOperation.h in CopyFiles */,
 				27478E861A76475F004AE621 /* MCOAccountValidator.h in CopyFiles */,
 				27478E871A76475F004AE621 /* MCAccountValidator.h in CopyFiles */,
@@ -1236,6 +1241,7 @@
 			dstPath = include/MailCore;
 			dstSubfolderSpec = 16;
 			files = (
+				C6BEC1AA1B1256BA00546519 /* MCHTMLCleaner.h in CopyFiles */,
 				276A65D01A7B7E7D008722C2 /* MCMXRecordResolverOperation.h in CopyFiles */,
 				27478E881A7647AC004AE621 /* MCOAccountValidator.h in CopyFiles */,
 				27478E891A7647AC004AE621 /* MCAccountValidator.h in CopyFiles */,
@@ -1559,6 +1565,8 @@
 		BD62729C1A158DA900129AA8 /* MCWin32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWin32.h; sourceTree = "<group>"; };
 		BD637139177DFF080094121B /* MCLibetpan.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MCLibetpan.cpp; sourceTree = "<group>"; };
 		BD63713A177DFF080094121B /* MCLibetpan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLibetpan.h; sourceTree = "<group>"; };
+		BD7C0F451B545CE2003337DF /* MCZipMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MCZipMac.mm; sourceTree = "<group>"; };
+		BD7C0F481B545D0B003337DF /* MCZipPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCZipPrivate.h; sourceTree = "<group>"; };
 		BDCD7C591A5B1C2C0001DCC3 /* MCErrorMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MCErrorMessage.cpp; sourceTree = "<group>"; };
 		BDCD7C5A1A5B1C2C0001DCC3 /* MCErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCErrorMessage.h; sourceTree = "<group>"; };
 		BDCD7C6A1A70771B0001DCC3 /* csdetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = csdetect.cpp; sourceTree = "<group>"; };
@@ -1665,7 +1673,6 @@
 		C6081679177635D2001F1018 /* MCIMAPDisconnectOperation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MCIMAPDisconnectOperation.cpp; sourceTree = "<group>"; };
 		C608167A177635D2001F1018 /* MCIMAPDisconnectOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIMAPDisconnectOperation.h; sourceTree = "<group>"; };
 		C608167F17766FC5001F1018 /* MCOIMAPBaseOperation+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCOIMAPBaseOperation+Private.h"; sourceTree = "<group>"; };
-		C623C58A16FD8C22001BBEFC /* MCOAbstractMessage+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCOAbstractMessage+Private.h"; sourceTree = "<group>"; };
 		C623C58B16FE52C0001BBEFC /* MCOHTMLRendererDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCOHTMLRendererDelegate.h; sourceTree = "<group>"; };
 		C623C58D16FE6B45001BBEFC /* MCOIMAPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCOIMAPOperation.h; sourceTree = "<group>"; };
 		C623C58E16FE6B45001BBEFC /* MCOIMAPOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MCOIMAPOperation.mm; sourceTree = "<group>"; };
@@ -1732,7 +1739,6 @@
 		C64BB24416EDAAFE000DB34C /* MCOMessageHeader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MCOMessageHeader.mm; sourceTree = "<group>"; };
 		C64BB24616EEF89D000DB34C /* MCOAddress+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCOAddress+Private.h"; sourceTree = "<group>"; };
 		C64BB24E16EEFFE2000DB34C /* MCOMessageHeader+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MCOMessageHeader+Private.h"; sourceTree = "<group>"; };
-		C64BB24F16FBEF0E000DB34C /* MCOAbstractPart+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MCOAbstractPart+Private.h"; sourceTree = "<group>"; };
 		C64BB25016FC2846000DB34C /* NSValue+MCO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+MCO.h"; sourceTree = "<group>"; };
 		C64BB25116FC2848000DB34C /* NSValue+MCO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSValue+MCO.mm"; sourceTree = "<group>"; };
 		C64BB25316FC2AA0000DB34C /* MCValuePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCValuePrivate.h; sourceTree = "<group>"; };
@@ -2396,14 +2402,12 @@
 			children = (
 				C64BB23616EDAA2B000DB34C /* MCOAbstract.h */,
 				C64BB23316EDAA17000DB34C /* MCOAbstractMessage.h */,
-				C623C58A16FD8C22001BBEFC /* MCOAbstractMessage+Private.h */,
 				C64BB23416EDAA17000DB34C /* MCOAbstractMessage.mm */,
 				C64BB23716EDAA3F000DB34C /* MCOAbstractMessagePart.h */,
 				C64BB23816EDAA3F000DB34C /* MCOAbstractMessagePart.mm */,
 				C64BB23A16EDAAC7000DB34C /* MCOAbstractMultipart.h */,
 				C64BB23B16EDAAC7000DB34C /* MCOAbstractMultipart.mm */,
 				C64BB23D16EDAAE0000DB34C /* MCOAbstractPart.h */,
-				C64BB24F16FBEF0E000DB34C /* MCOAbstractPart+Private.h */,
 				C64BB23E16EDAAE1000DB34C /* MCOAbstractPart.mm */,
 				C64BB24016EDAAF3000DB34C /* MCOAddress.h */,
 				C64BB24616EEF89D000DB34C /* MCOAddress+Private.h */,
@@ -2943,6 +2947,8 @@
 		C6E665A91796500B0063F2CF /* zip */ = {
 			isa = PBXGroup;
 			children = (
+				BD7C0F481B545D0B003337DF /* MCZipPrivate.h */,
+				BD7C0F451B545CE2003337DF /* MCZipMac.mm */,
 				C6E665AA1796500B0063F2CF /* MCZip.cpp */,
 				C6E665AB1796500B0063F2CF /* MCZip.h */,
 				C6E665AC1796500B0063F2CF /* MiniZip */,
@@ -3640,6 +3646,7 @@
 				C6CF62B9175324CE006398B9 /* MCOMailProvider.mm in Sources */,
 				C6CF62BB175324CE006398B9 /* MCOMailProvidersManager.mm in Sources */,
 				84D7378F199C02A8005124E5 /* MCONNTPDisconnectOperation.mm in Sources */,
+				BD7C0F461B545CE2003337DF /* MCZipMac.mm in Sources */,
 				C6CF62BD175324CE006398B9 /* MCONetService.mm in Sources */,
 				C6EFFBCC1833334900CFF656 /* MCOIMAPMultiDisconnectOperation.mm in Sources */,
 				C6CF62C6175324F0006398B9 /* MCMailProvider.cpp in Sources */,
@@ -3911,6 +3918,7 @@
 				C668E2CD1735CB8900A2BB47 /* MCAutoreleasePoolMac.mm in Sources */,
 				C6CF62BA175324CE006398B9 /* MCOMailProvider.mm in Sources */,
 				C6CF62BC175324CE006398B9 /* MCOMailProvidersManager.mm in Sources */,
+				BD7C0F471B545CE2003337DF /* MCZipMac.mm in Sources */,
 				84D73790199C02A8005124E5 /* MCONNTPDisconnectOperation.mm in Sources */,
 				C6CF62BE175324CE006398B9 /* MCONetService.mm in Sources */,
 				C6EFFBCD1833334900CFF656 /* MCOIMAPMultiDisconnectOperation.mm in Sources */,
@@ -3985,6 +3993,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "framework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
@@ -4013,6 +4022,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "framework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
 					"-letpan-ios",
@@ -4123,7 +4133,6 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4157,7 +4166,6 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(OSX_LIBRARY_SEARCH_PATHS)";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				OSX_HEADERS_SEARCH_PATHS = "\"$(SRCROOT)/../src/core/basetypes/icu-ucsdet/include\" \"$(SRCROOT)/../Externals/libetpan-osx/include\" \"$(SRCROOT)/../Externals/ctemplate-osx/include\" /usr/include/tidy /usr/include/libxml2";
 				OSX_LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan-osx/lib\" \"$(SRCROOT)/../Externals/ctemplate-osx/lib\"";
@@ -4175,7 +4183,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "U_COMMON_IMPLEMENTATION=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -4202,7 +4209,6 @@
 				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(IOS_LIBRARY_SEARCH_PATHS)";
 				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(OSX_LIBRARY_SEARCH_PATHS)";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OSX_HEADERS_SEARCH_PATHS = "\"$(SRCROOT)/../src/core/basetypes/icu-ucsdet/include\" \"$(SRCROOT)/../Externals/libetpan-osx/include\" \"$(SRCROOT)/../Externals/ctemplate-osx/include\" /usr/include/tidy /usr/include/libxml2";
 				OSX_LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../Externals/libetpan-osx/lib\" \"$(SRCROOT)/../Externals/ctemplate-osx/lib\"";
 			};
@@ -4212,7 +4218,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
 			};
@@ -4222,7 +4230,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = MailCore;
 				SDKROOT = macosx;
 			};
@@ -4231,6 +4241,7 @@
 		C64EA799169F259300778456 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -4239,6 +4250,7 @@
 		C64EA79A169F259300778456 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -4250,12 +4262,13 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				INFOPLIST_FILE = "../tests-ios/tests-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-lctemplate-ios",
@@ -4281,12 +4294,13 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
 				);
 				INFOPLIST_FILE = "../tests-ios/tests-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -4378,7 +4392,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "MailCore-ios";
 				SDKROOT = iphoneos;
@@ -4391,7 +4407,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = YES;
 				EXECUTABLE_PREFIX = lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "MailCore-ios";
 				SDKROOT = iphoneos;
@@ -4409,6 +4427,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "framework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-lctemplate",
 					"-letpan",
@@ -4438,6 +4457,7 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "framework-Info.plist";
 				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
 					"-lctemplate",
 					"-letpan",

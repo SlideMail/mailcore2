@@ -7,25 +7,8 @@ build_git_ios()
   fi
 
   simarchs="i386 x86_64"
-  if xcodebuild -showsdks 2>/dev/null|grep iphoneos8.1 >/dev/null ; then
-    sdkversion=8.1
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos8.0 >/dev/null ; then
-    sdkversion=8.0
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.1 >/dev/null ; then
-    sdkversion=7.1
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos7.0 >/dev/null ; then
-    sdkversion=7.0
-    devicearchs="armv7 armv7s arm64"
-  elif xcodebuild -showsdks 2>/dev/null|grep iphoneos6.1 >/dev/null ; then
-    sdkversion=6.1
-    devicearchs="armv7 armv7s"
-  else
-    echo SDK not found
-    exit 1
-  fi
+  sdkversion="`xcodebuild -showsdks 2>/dev/null | grep iphoneos | sed 's/.*iphoneos\(.*\)/\1/'`"
+  devicearchs="armv7 armv7s arm64"
 
   versions_path="$scriptpath/deps-versions.plist"
   version="`defaults read "$versions_path" "$name" 2>/dev/null`"
@@ -84,14 +67,14 @@ build_git_ios()
   cd "$srcdir/$name/build-mac"
   sdk="iphoneos$sdkversion"
   echo building $sdk
-  xctool -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$devicearchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkversion"
+  xctool -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$devicearchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkversion" OTHER_CFLAGS='$(inherited) -fembed-bitcode'
   if test x$? != x0 ; then
     echo failed
     exit 1
   fi
   sdk="iphonesimulator$sdkversion"
   echo building $sdk
-  xctool -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$simarchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkversion"
+  xctool -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj" ARCHS="$simarchs" IPHONEOS_DEPLOYMENT_TARGET="$sdkversion" OTHER_CFLAGS='$(inherited) -fembed-bitcode'
   if test x$? != x0 ; then
     echo failed
     exit 1
@@ -158,12 +141,13 @@ build_git_ios()
 
   if test x$build_for_external != x1 ; then
     defaults write "$versions_path" "$name" "$version"
+    plutil -convert xml1 "$versions_path"
   fi
 }
 
 build_git_osx()
 {
-  sdk="macosx10.9"
+  sdk="`xcodebuild -showsdks 2>/dev/null | grep macosx | sed 's/.*macosx\(.*\)/\1/'`"
   archs="x86_64"
   
   if test "x$name" = x ; then
@@ -225,7 +209,7 @@ build_git_osx()
   echo building $name $version - $rev
 
   cd "$srcdir/$name/build-mac"
-  xctool -project "$xcode_project" -sdk $sdk -scheme "$xcode_target" -configuration Release ARCHS="$archs" SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj"
+  xctool -project "$xcode_project" -sdk macosx$sdk -scheme "$xcode_target" -configuration Release ARCHS="$archs" SYMROOT="$tmpdir/bin" OBJROOT="$tmpdir/obj"
   if test x$? != x0 ; then
     echo failed
     exit 1
@@ -290,6 +274,7 @@ build_git_osx()
 
   if test x$build_for_external != x1 ; then
     defaults write "$versions_path" "$name" "$version"
+    plutil -convert xml1 "$versions_path"
   fi
 }
 
@@ -342,5 +327,6 @@ get_prebuilt_dep()
   
   if test -d "$scriptpath/../Externals/$name" ; then
     defaults write "$installed_versions_path" "$name" "$version"
+    plutil -convert xml1 "$installed_versions_path"
   fi
 }
